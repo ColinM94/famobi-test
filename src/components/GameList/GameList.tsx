@@ -1,6 +1,7 @@
 import * as React from "react"
 import { FlatList, View, StyleSheet } from "react-native"
-import { ListItem } from "./ListItem"
+import { GameListItem } from "./GameListItem"
+import { theme } from "../../common/theme"
 
 interface GameListProps {
     games: Game[]
@@ -12,7 +13,7 @@ export const GameList = ({ games }: GameListProps) => {
     return (
         <FlatList
             data={games}
-            renderItem={({ item }) => <ListItem item={item} />}
+            renderItem={({ item }) => <GameListItem item={item} />}
             ItemSeparatorComponent={itemSeparator}
             contentContainerStyle={styles.container}
         />
@@ -21,10 +22,9 @@ export const GameList = ({ games }: GameListProps) => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 12,
-        backgroundColor: "#121212",
+        padding: theme.spacing.primary,
     },
     itemSeparator: {
-        height: 12,
+        height: theme.spacing.primary,
     },
 })

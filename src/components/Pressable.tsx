@@ -4,25 +4,16 @@ import {
     Pressable as RNPressable,
     PressableProps as RNPressableProps,
     StyleProp,
-    ColorValue,
+    ViewStyle,
 } from "react-native"
-import { ViewStyle } from "react-native"
+import { theme } from "../common/theme"
 
 export interface PressableProps extends RNPressableProps {
-    /** Enable/Disable onPress feedback. Default is true.  */
-    feedback?: boolean
-    feedbackColor?: ColorValue
     style?: StyleProp<ViewStyle>
 }
 
 export const Pressable = (props: PressableProps) => {
-    const {
-        children,
-        style,
-        feedback = true,
-        feedbackColor = theme.colors.feedback,
-        ...rest
-    } = props
+    const { children, style, ...rest } = props
 
     // Combines objects in style array into one object.
     const flattenStyle = StyleSheet.flatten([style])
@@ -32,16 +23,12 @@ export const Pressable = (props: PressableProps) => {
             style={({ pressed }) => [
                 flattenStyle,
                 {
-                    backgroundColor: feedback
-                        ? pressed
-                            ? feedbackColor
-                            : flattenStyle?.backgroundColor ?? "rgba(0,0,0,0)"
-                        : flattenStyle?.backgroundColor,
-                    flexDirection: flattenStyle?.flexDirection ?? "column",
+                    backgroundColor: pressed
+                        ? theme.colors.feedback
+                        : flattenStyle?.backgroundColor ?? "rgba(0,0,0,0)",
                 },
             ]}
             hitSlop={10}
-            testID="pressable"
             {...rest}
         >
             {children}
