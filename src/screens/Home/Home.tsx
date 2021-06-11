@@ -4,6 +4,7 @@ import { theme } from "../../common/theme"
 import { HomeHeader } from "./HomeHeader"
 import { HomeGameList } from "./HomeGameList"
 
+/** Loads the data from the API. Also displays a loading indicator. */
 export const Home = () => {
     const [games, setGames] = React.useState<Game[]>([])
     const [category, setCategory] = React.useState("")

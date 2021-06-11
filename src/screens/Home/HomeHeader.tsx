@@ -14,6 +14,7 @@ interface HomeHeaderProps {
     setSort: (sort: string) => void
 }
 
+// 3 Pickers for filtering and sorting. Passes options stored in "filterOptions.ts" to the generic Header component in "components/Header".
 export const HomeHeader = (props: HomeHeaderProps) => {
     const { category, setCategory, sort, setSort, platform, setPlatform } = props
 

@@ -8,6 +8,7 @@ interface ModalProps {
     setShow: (show: boolean) => void
 }
 
+/** Display content above a view, can be shown and hidden dynamically. */
 export const Modal = ({ show, setShow, children }: ModalProps) => {
     return (
         <RNModal

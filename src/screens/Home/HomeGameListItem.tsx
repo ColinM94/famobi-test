@@ -8,6 +8,7 @@ interface HomeGameListItemProps {
     item: Game
 }
 
+/** Displays a single item in the list. OnPress it will navigate to GameDetails. */
 export const HomeGameListItem = ({ item }: HomeGameListItemProps) => {
     const navigation = useNavigation()
 

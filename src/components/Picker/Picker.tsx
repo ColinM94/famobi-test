@@ -16,6 +16,7 @@ export type PickerOption = {
     value: string
 }
 
+/** Displays a bottom sheet with multiple options. */
 export const Picker = ({ value, setValue, show, setShow, options }: PickerProps) => {
     const hidePicker = () => {
         setShow(false)

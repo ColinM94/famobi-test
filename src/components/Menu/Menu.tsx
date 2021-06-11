@@ -17,6 +17,7 @@ export type MenuItem = {
     icon: IconProp
 }
 
+/** Displays a pop in menu at the top right of the screen.  */
 export const Menu = ({ show, setShow, menuItems }: MenuProps) => {
     const handlePress = (onPress: () => void) => {
         setShow(false)

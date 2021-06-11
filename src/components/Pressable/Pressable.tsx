@@ -12,6 +12,7 @@ interface PressableProps extends RNPressableProps {
     style?: StyleProp<ViewStyle>
 }
 
+/** Pressable View */
 export const Pressable = (props: PressableProps) => {
     const { children, style, ...rest } = props
 

@@ -1,3 +1,5 @@
+/** Global styles including colors, typography, spacing, etc. */
+
 const colors = {
     primary: "#4ea33c",
     background: "#121212",

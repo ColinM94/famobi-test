@@ -4,6 +4,7 @@ import { View, StyleSheet, LogBox } from "react-native"
 import { theme } from "./common/theme"
 import { Navigation } from "./Navigation"
 
+/**  Core of application. Sets global background color, configures status bar and loads Navigation ( Navigation then loads Home.tsx). */
 export const Main = () => {
     LogBox.ignoreLogs(["Invalid child context"])
 

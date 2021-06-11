@@ -1,3 +1,5 @@
+/** Global types used for TypeScript intellisense */
+
 type Game = {
     developer: string
     game_url: string

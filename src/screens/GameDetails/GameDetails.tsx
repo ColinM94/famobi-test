@@ -5,9 +5,11 @@ import { theme } from "../../common/theme"
 import { Header } from "../../components/Header"
 
 interface GameDetails {
+    /** Passed using React Navigation */
     route: RouteProp<any, "Signin">
 }
 
+/** Displays details about a specific game */
 export const GameDetails = ({ route }: GameDetails) => {
     const game: Game = route!.params!.game
 

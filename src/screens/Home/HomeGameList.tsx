@@ -7,6 +7,7 @@ interface HomeGameListProps {
     games: Game[]
 }
 
+/** Displays the list of games. */
 export const HomeGameList = ({ games }: HomeGameListProps) => {
     const itemSeparator = () => <View style={styles.itemSeparator} />
 

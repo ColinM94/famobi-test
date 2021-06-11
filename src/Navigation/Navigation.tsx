@@ -6,6 +6,7 @@ import { Home } from "../screens/Home"
 
 const Stack = createStackNavigator()
 
+/** Allows navigation between screens */
 export const Navigation = () => {
     return (
         <NavigationContainer>

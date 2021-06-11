@@ -12,6 +12,7 @@ interface HeaderProps {
     menuItems?: MenuItem[]
 }
 
+/** Can display a title, a back button, and a menu button. */
 export const Header = (props: HeaderProps) => {
     const navigation = useNavigation()
     const { backBtnEnabled, title, menuItems } = props
