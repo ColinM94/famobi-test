@@ -26,6 +26,7 @@ export const GameDetails = ({ route }: GameDetails) => {
         <>
             <SafeAreaView style={styles.container}>
                 <Header backBtnEnabled title={game.title} />
+
                 <View style={styles.card}>
                     <Image
                         source={{ uri: game.thumbnail }}
@@ -69,13 +70,13 @@ export const GameDetails = ({ route }: GameDetails) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: theme.spacing.primary,
         backgroundColor: theme.colors.background,
     },
     card: {
         flex: 1,
         backgroundColor: theme.colors.card,
         borderRadius: theme.roundness,
+        margin: theme.spacing.primary,
     },
     textContainer: {
         marginTop: 8,
@@ -88,9 +89,10 @@ const styles = StyleSheet.create({
         marginBottom: 4,
     },
     leftItem: {
-        flex: 1,
+        flex: 1.2,
     },
     rightItem: {
+        marginLeft: 4,
         flex: 2,
     },
     label: {
