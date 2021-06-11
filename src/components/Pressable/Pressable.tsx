@@ -6,9 +6,9 @@ import {
     StyleProp,
     ViewStyle,
 } from "react-native"
-import { theme } from "../common/theme"
+import { theme } from "../../common/theme"
 
-export interface PressableProps extends RNPressableProps {
+interface PressableProps extends RNPressableProps {
     style?: StyleProp<ViewStyle>
 }
 

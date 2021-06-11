@@ -1,19 +1,19 @@
 import * as React from "react"
 import { FlatList, View, StyleSheet } from "react-native"
-import { GameListItem } from "./GameListItem"
+import { HomeGameListItem } from "./HomeGameListItem"
 import { theme } from "../../common/theme"
 
-interface GameListProps {
+interface HomeGameListProps {
     games: Game[]
 }
 
-export const GameList = ({ games }: GameListProps) => {
+export const HomeGameList = ({ games }: HomeGameListProps) => {
     const itemSeparator = () => <View style={styles.itemSeparator} />
 
     return (
         <FlatList
             data={games}
-            renderItem={({ item }) => <GameListItem item={item} />}
+            renderItem={({ item }) => <HomeGameListItem item={item} />}
             ItemSeparatorComponent={itemSeparator}
             contentContainerStyle={styles.container}
         />

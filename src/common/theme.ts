@@ -13,17 +13,22 @@ export const theme = {
     colors: colors,
     typography: {
         h1: {
-            fontSize: 18,
+            fontSize: 24,
             letterSpacing: 0.25,
             color: colors.text.primary,
         },
         h2: {
-            fontSize: 17,
+            fontSize: 20,
+            letterSpacing: 0,
+            color: colors.text.primary,
+        },
+        h3: {
+            fontSize: 18,
             letterSpacing: 0,
             color: colors.text.primary,
         },
         body: {
-            fontSize: 16,
+            fontSize: 14,
             letterSpacing: 0.5,
             color: colors.text.primary,
         },
