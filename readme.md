@@ -20,4 +20,3 @@ To run this project locally and view the code, these programs and packages are r
 9. Running the app locally always gives me bad performance, the published version here will show the actual performance of the app.
     - https://expo.io/@someirishlad/famobi-test
 
-If you have any questions send me an email colinmaher94@gmail.com :)
